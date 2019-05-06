@@ -7,8 +7,18 @@ using Vidly.Models;
 
 namespace Vidly.Controllers
 {
+
     public class MoviesController : Controller
     {
+        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1, 12)}")]
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year + "/" + month);
+        }
+        public ActionResult Edit(int id)
+        {
+            return Content("id = " + id);
+        }
         public ActionResult Random()
         {
             var movie = new Movie
@@ -18,9 +28,13 @@ namespace Vidly.Controllers
             return View(movie);
         }
         // GET: Movies
-        public ActionResult Index()
+        public ActionResult Index(int? pageIndex, string sortBy)
         {
-            return View();
+            if (!pageIndex.HasValue)
+                pageIndex = 1;
+            if (String.IsNullOrWhiteSpace(sortBy))
+                sortBy = "Name";
+            return Content(String.Format("pageIndex={0}&sortBy={1}",pageIndex,sortBy));
         }
     }
 }
