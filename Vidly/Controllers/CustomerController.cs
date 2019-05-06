@@ -11,7 +11,7 @@ namespace Vidly.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            //nuts!
+            //BALLS BALLS BALLS OF STEEL!
             return View();
         }
     }
