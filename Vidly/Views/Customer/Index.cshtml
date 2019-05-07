@@ -1,0 +1,19 @@
+﻿
+@model  Vidly.ViewModels.CustomerIndexViewModel
+
+@*
+    This is a comment!
+*@
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    <ul>
+        @foreach (var customer in Model.Customers)
+        {
+            <li>@customer.Name</li>
+        }
+    </ul>
+}
+
