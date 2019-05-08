@@ -1,0 +1,11 @@
+﻿
+@model  Vidly.ViewModels.CustomerDetailsViewModel
+
+@*
+    This is a comment!
+*@
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>@Model.Customers[Model.Id].Name</h2>
