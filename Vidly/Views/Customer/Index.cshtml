@@ -13,6 +13,7 @@
         @foreach (var customer in Model.Customers)
         {
             <li>@Html.ActionLink(customer.Name, "details/" + customer.Id, "customer")</li>
+            <li>@customer.MembershipType.DiscountRate%</li>
         }
     </ul>
 }

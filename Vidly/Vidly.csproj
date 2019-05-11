@@ -180,9 +180,22 @@
     <Compile Include="Migrations\201905102050435_InitialModel.Designer.cs">
       <DependentUpon>201905102050435_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905110040031_AddMembershipType.cs" />
+    <Compile Include="Migrations\201905110040031_AddMembershipType.Designer.cs">
+      <DependentUpon>201905110040031_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905110042266_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201905110042266_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201905110042266_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905110055539_AppliedAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201905110055539_AppliedAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201905110055539_AppliedAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -273,6 +286,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905102050435_InitialModel.resx">
       <DependentUpon>201905102050435_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905110040031_AddMembershipType.resx">
+      <DependentUpon>201905110040031_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905110042266_PopulateMembershipTypes.resx">
+      <DependentUpon>201905110042266_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905110055539_AppliedAnnotationsToCustomerName.resx">
+      <DependentUpon>201905110055539_AppliedAnnotationsToCustomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
