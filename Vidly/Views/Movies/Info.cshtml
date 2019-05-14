@@ -1,0 +1,11 @@
+﻿@model Vidly.Models.Movie
+@{
+    ViewBag.Title = "Info";
+}
+
+<h2>@Model.Name</h2>
+<ul>
+    <li>Released: @Model.ReleaseDate</li>
+    <li>@Model.NumberInStock copies available</li>
+    <li>@Model.Genre.Name</li>
+</ul>

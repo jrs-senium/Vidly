@@ -1,19 +1,21 @@
 ﻿
-@model  Vidly.ViewModels.CustomerIndexViewModel
+@model  IEnumerable<Vidly.Models.Customer>
 
 @*
     This is a comment!
 *@
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Customer";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+    <h2></h2>
 @{
     <ul>
-        @foreach (var customer in Model.Customers)
+        @foreach (var customer in Model)
         {
-            <li>@Html.ActionLink(customer.Name, "details/" + customer.Id, "customer")</li>
-            <li>@customer.MembershipType.DiscountRate%</li>
+            <li>@Html.ActionLink(customer.Name, "Edit", "Customer", new { id = customer.Id }, null)</li>
+            <li>@customer.MembershipType.Name</li>
         }
     </ul>
 }
